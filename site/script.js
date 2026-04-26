@@ -177,10 +177,64 @@ const BRANDS = [
 
   // ============================================================
   {
+    slug: "ecolab",
+    name: "Ecolab",
+    italicName: "Ecolab",
+    no: "08",
+    category: "Hygiene & Cleaning",
+    line: "Industrial cleaning chemistry — the FaciliPro™ programme.",
+    longLede: "Ecolab is the global leader in water, hygiene and infection-prevention solutions. Pankti Enterprises supplies the Oasis Compac and FaciliPro range to hotels, hospitals, kitchens, malls and facilities-management houses across the country. Twelve professional SKUs covering every surface in a building.",
+    cover: null,
+    products: [
+      { name: "Oasis Compac Multipurpose Cleaner and Disinfectant", code: "OC12", type: "Multi Purpose Cleaner & Disinfectant",
+        desc: "Multi-purpose cleaner and disinfectant formulated to penetrate dirt and soil. For use on all types of hard surfaces, inside and outside washrooms as well.",
+        dilution: "Normal soil: 8 ml · Heavy soil: 16 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Glass Cleaner", code: "OC3", type: "Glass Cleaner",
+        desc: "Mild, general-purpose detergent formulated with drying and evaporating agents — designed to clean mirrors, windows and other glass surfaces.",
+        dilution: "Normal soil: 20 ml · Heavy soil: 40 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Furniture Polish", code: "OC4", type: "Furniture Polish",
+        desc: "Neutral non-phosphate formula. Spray-and-wipe protective polish for furniture, stainless steel, aluminium, plastics and vinyl.",
+        dilution: "90 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Air Fresh", code: "OC5", type: "Air Freshener — Mild",
+        desc: "Air freshener and deodoriser. Leaves rooms smelling clean and refreshed.",
+        dilution: "50 – 70 ml", pack: "4 × 1 L", img: null },
+      { name: "Oasis Compac Air Exotic", code: "OC5 Plus", type: "Air Freshener — Strong",
+        desc: "Air freshener and deodoriser at strong intensity. Leaves rooms smelling clean and refreshed.",
+        dilution: "50 – 70 ml", pack: "4 × 1 L", img: null },
+      { name: "Oasis Compac Toilet Bowl Cleaner", code: "OC6", type: "Toilet Bowl Cleaner",
+        desc: "Eliminates rust, lime, organic deposits and offensive odours in toilet bowls.",
+        dilution: "RTU — Ready to use", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Neutral Floor Cleaner", code: "OC7", type: "Neutral Floor Cleaner",
+        desc: "Neutral floor cleaner. Can be used on floors and floor finishes to remove stain and dirt for high-shine surfaces.",
+        dilution: "Normal soil: 10 ml · Heavy soil: 20 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Heavy Duty Floor Cleaner", code: "OC8", type: "Heavy Duty Floor Degreaser / Stripper",
+        desc: "Heavy-duty floor cleaner and low-suds stripper which penetrates, emulsifies and dissolves tough soils.",
+        dilution: "Normal soil: 10 ml · Heavy soil: 20 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Acid Bathroom Cleaner", code: "OC9", type: "Bathroom Cleaner — Hard-water Locations",
+        desc: "Eliminates rust, lime, organic deposits and offensive odours in toilet bowls where hard water is the source.",
+        dilution: "Normal soil: 30 ml · Medium: 45 ml · Heavy: 60 ml", pack: "2 × 5 L", img: null },
+      { name: "Oasis Compac Magic Shine", code: "OC10", type: "Stainless Steel Polish",
+        desc: "Mineral-oil polish that leaves stainless steel surfaces with a bright finish.",
+        dilution: "RTU — Ready to use", pack: "2 × 5 L", img: null },
+      { name: "All Purpose Cleaner", code: "APC", type: "All Purpose Cleaner Concentrate",
+        desc: "General-purpose concentrated liquid detergent for dish-washing, floor cleaning, hard surface and glass cleaning.",
+        dilution: "10 – 20 ml", pack: "4 × 5 L", img: null },
+      { name: "Lemon Eze", code: "LE", type: "Crème Cleanser",
+        desc: "Heavy-duty cleanser for removal of scaling, hard-water spots and marks, soap-scum build-up, rust, grease and more.",
+        dilution: "RTU — Ready to use", pack: "12 × 32 oz", img: null },
+    ],
+    foot: {
+      title: "Everywhere it matters.™",
+      body: "FaciliPro is Ecolab's professional cleaning programme — a coordinated chemistry stack for every surface in a facility, with dilution, dosing and on-site training to match.",
+    },
+  },
+
+  // ============================================================
+  {
     slug: "kartin",
     name: "Kartin",
     italicName: "Kartin",
-    no: "08",
+    no: "09",
     category: "Tea/Coffee Premix & Vending",
     line: "Take small, feel big — premix powders and vending machines.",
     longLede: "Kartin is the leading manufacturer of beverage premix powders and vending machines, established in 2015 and based in Mumbai. Original taste, no artificial colour, no preservative — ready-to-use premixes for any vending machine. Eleven flavours across hot and cold.",
@@ -210,7 +264,7 @@ const BRANDS = [
     slug: "ensono",
     name: "Ensono",
     italicName: "Ensono",
-    no: "09",
+    no: "10",
     category: "Workspace Accessories",
     line: "Aluminium laptop stands, hubs and the desk-side essentials.",
     longLede: "Ensono builds the quiet, well-machined desk accessories — folding aluminium laptop risers, USB-C hubs, the bits that make a workspace work. Pankti carries them for corporate fit-outs and gifting.",
@@ -226,7 +280,7 @@ const BRANDS = [
     slug: "diwali",
     name: "Diwali Gifting",
     italicName: "Diwali",
-    no: "10",
+    no: "11",
     category: "Festive Hampers",
     line: "Curated luxury hampers — sweets, dry fruits, ornament-grade boxes.",
     longLede: "Each Diwali we curate a small, considered range of luxury hampers — Mughal-revival trunks, jharokha-front coffers, brocade-lined chests housing sweets, dry-fruits and brass-lidded jars. Built for board-level gifting and concierge programmes.",
@@ -259,6 +313,7 @@ const BROCHURE_FALLBACK = {
   indus: "assets/brochures/indus.pdf",
   "indus-plus": "assets/brochures/indus-plus.pdf",
   celesta: "assets/brochures/celesta.pdf",
+  ecolab: null,
   kartin: "assets/brochures/kartin.pdf",
   ensono: null,
   diwali: "assets/brochures/diwali-2025.pdf",
@@ -334,13 +389,22 @@ function renderBrand(slug) {
     const imgPart = p.img
       ? `<div class="product-card__img" style="background-image:url('${p.img}')"></div>`
       : `<div class="product-card__img" style="background:linear-gradient(135deg, #FAF3DF, #E5D9B6); display:grid; place-items:center; color:#6E1F2C; font-family:'Fraunces',serif; font-style:italic; font-size:36px; letter-spacing:-.02em; text-align:center; padding:20px;">${p.code || b.italicName}</div>`;
+    const typePart = p.type ? `<span class="product-card__type">${p.type}</span>` : "";
+    const specRows = [];
+    if (p.dilution) specRows.push(`<div class="spec"><span class="spec__label">Dilution</span><span class="spec__val">${p.dilution}</span></div>`);
+    if (p.pack)     specRows.push(`<div class="spec"><span class="spec__label">Pack</span><span class="spec__val">${p.pack}</span></div>`);
+    const specsPart = specRows.length
+      ? `<div class="product-card__specs">${specRows.join("")}</div>`
+      : "";
     return `
       <article class="product-card reveal">
         ${imgPart}
         <div class="product-card__body">
           <span class="product-card__no">N° ${String(i + 1).padStart(2, "0")} / ${String(b.products.length).padStart(2, "0")}</span>
           <h3 class="product-card__name">${p.name}</h3>
+          ${typePart}
           <p class="product-card__desc">${p.desc}</p>
+          ${specsPart}
           <div class="product-card__meta">
             <span><strong>${p.code || "—"}</strong></span>
             <span>Trade pricing</span>
