@@ -588,7 +588,7 @@ function renderUserReviews() {
   if (!container) return;
   const reviews = loadUserReviews();
   if (!reviews.length) { container.innerHTML = ""; return; }
-  container.innerHTML = reviews.map((r, i) => {
+  container.innerHTML = reviews.map((r) => {
     const filled = "★".repeat(r.rating);
     const empty  = "★".repeat(Math.max(0, 5 - r.rating));
     return `
@@ -603,20 +603,9 @@ function renderUserReviews() {
           <span class="review__name">${escapeHtml(r.name)}</span>
           <span class="review__role">${escapeHtml(r.role || "Verified visitor")}</span>
         </footer>
-        <button class="review__delete" data-idx="${i}" aria-label="Delete this review">Remove</button>
       </article>
     `;
   }).join("");
-
-  container.querySelectorAll(".review__delete").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const idx = Number(btn.dataset.idx);
-      const reviews = loadUserReviews();
-      reviews.splice(idx, 1);
-      saveUserReviews(reviews);
-      renderUserReviews();
-    });
-  });
 }
 
 function initReviewForm() {
