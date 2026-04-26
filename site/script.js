@@ -82,7 +82,57 @@ const BRANDS = [
     longLede: "Pankti is an authorised Coffee Day Global channel partner. We deploy CCD-branded vending kiosks and beverage hardware into corporate pantries, hotels, hospitals and institutional sites — the espresso-machine houses (Brew Master, Indus, Indus+, Celesta) sit under their own brand pages.",
     cover: "assets/products/ccd/ccd_vending_kiosk.png",
     products: [
-      { name: "CCD Vending Kiosk", code: "CCD · K1", desc: "Branded counter-top kiosk with bean-to-cup machine, condiment tray and CCD livery — site-installed and serviced.", img: "assets/products/ccd/ccd_vending_kiosk.png" },
+      // ---- Disposables & accessories — featured first ----
+      { name: "Wooden Stirrers", code: "CCD · STIR", type: "Disposables",
+        desc: "Coffee-Day-branded disposable wooden stirrers — bulk pack, FSC-grade pine. The standard back-bar consumable for every CCD kiosk.",
+        img: "assets/products/ccd/stirrers.jpeg" },
+      { name: "Coffee Day Ceramic Mug — Nurtured by Nature", code: "CCD · MUG", type: "Eco-Branded Ceramic",
+        desc: "CCD-branded ceramic mug from the 'Nurtured by Nature' series — gift-boxed, eco-conscious finish. Standard for boardroom service and corporate gifting.",
+        img: "assets/products/ccd/ccd-mug.jpeg" },
+      { name: "Sugar Sachets", code: "CCD · SUGR", type: "Disposables",
+        desc: "Branded single-serve sugar sachets — vegetarian-marked, food-safe foil. Stocked alongside the kiosk at every CCD installation.",
+        img: "assets/products/ccd/sugar.jpeg" },
+
+      // ---- Hardware ----
+      { name: "CCD Vending Kiosk", code: "CCD · K1",
+        desc: "Branded counter-top kiosk with bean-to-cup machine, condiment tray and CCD livery — site-installed and serviced.",
+        img: "assets/products/ccd/ccd_vending_kiosk.png" },
+      { name: "Coffee Day Vending Machine — In Action", code: "CCD · DEMO",
+        desc: "Watch the bean-to-cup machine pull a fresh shot. Single-touch operation, programmed for consistency across high-traffic environments.",
+        video: "assets/products/ccd/machine.mp4", img: null },
+      { name: "Honey & Speciality Beverage", code: "CCD · MENU",
+        desc: "The CCD programme extends beyond espresso — honey-laced beverages, cold brews and seasonal recipes are part of the standard menu.",
+        video: "assets/products/ccd/honey-video.mp4", img: null },
+      { name: "Coffee Day Roasted Coffee Beans", code: "CCD · BEANS",
+        desc: "1 kg estate-roasted beans, exclusively for use with Coffee Day vending machines. Sourced from Coffee Day's own 15,000-acre Western-Ghats estates and 11,000 small growers.",
+        img: "assets/products/ccd/coffee-front.jpeg",
+        type: "Roasted Coffee Beans", pack: "1 kg" },
+
+      // ---- Tea programme — 8 variants ----
+      { name: "Assam Tea", code: "CCD · TEA", type: "Premix · Hot",
+        desc: "Bold and malty Assam — the workhorse Indian black tea, brewed strong with milk for the all-day workplace cup.",
+        img: "assets/products/ccd/assam.jpeg" },
+      { name: "Cardamom Tea", code: "CCD · TEA", type: "Premix · Hot",
+        desc: "Aromatic green-cardamom chai — sweet, spiced, programmed to single-button dispensing on the CCD vending stack.",
+        img: "assets/products/ccd/cardamom%20tea.jpeg" },
+      { name: "Ginger Tea", code: "CCD · TEA", type: "Premix · Hot",
+        desc: "Sharp, warming ginger chai — the classic adrak chai, dispensed without the brewing time.",
+        img: "assets/products/ccd/ginger%20tea.jpeg" },
+      { name: "Green Tea", code: "CCD · TEA", type: "Premix · Light",
+        desc: "Light, refreshing green tea — for the wellness-focused workplace, programmed for the right brew time and temperature.",
+        img: "assets/products/ccd/green%20tea.jpeg" },
+      { name: "Lemon Honey Tea", code: "CCD · TEA", type: "Speciality · Hot",
+        desc: "Honey-laced lemon tea — soothing, golden, and a winter-pantry favourite. Pairs naturally with the CCD honey programme.",
+        img: "assets/products/ccd/lemon%20honey%20tea.jpeg" },
+      { name: "Lemon Tea", code: "CCD · TEA", type: "Premix · Light",
+        desc: "Bright lemon tea — sugar, lemon, black tea, ready to pour. Office-pantry favourite.",
+        img: "assets/products/ccd/lemon%20tea.jpeg" },
+      { name: "Masala Tea", code: "CCD · TEA", type: "Premix · Signature",
+        desc: "The Indian roadside chai — cardamom, ginger, cinnamon, clove and pepper in a single, balanced premix. The signature pour.",
+        img: "assets/products/ccd/masala%20tea.jpeg" },
+      { name: "Mint Tea", code: "CCD · TEA", type: "Premix · Light",
+        desc: "Refreshing mint over a green base — clean, calming, palate-cleansing. The post-meal cup.",
+        img: "assets/products/ccd/mint%20tea.jpeg" },
     ],
     foot: {
       title: "Per-cup, per-month, or outright.",
@@ -101,7 +151,15 @@ const BRANDS = [
     longLede: "The Coffee Day Brew Master pairs the Indus coffee machine with a one-of-a-kind tea-pod brewer. Whatever your favourite beverage — tea or coffee — Brew Master has it covered. Convenient, authentic, home-style, hygienic.",
     cover: "assets/products/brewmaster/brew-master.jpg",
     products: [
-      { name: "Brew Master · Coffee + Tea", code: "INDUS + Tea Brewer", desc: "Indus bean-to-cup espresso machine paired with a freshly-brewed pod tea brewer. Indus: 670 × 350 × 803 mm, 120 cups/hr, 300 cups/day, 1 kg bean hopper. Tea Brewer: 236 × 207 × 378 mm, 35 servings/cycle, 9 kg.", img: "assets/products/brewmaster/brew-master.jpg" },
+      { name: "Brew Master · Coffee + Tea", code: "INDUS + Tea Brewer",
+        desc: "Indus bean-to-cup espresso machine paired with a freshly-brewed pod tea brewer. Indus: 670 × 350 × 803 mm, 120 cups/hr, 300 cups/day, 1 kg bean hopper. Tea Brewer: 236 × 207 × 378 mm, 35 servings/cycle, 9 kg.",
+        img: "assets/products/brewmaster/brew-master.jpg" },
+      { name: "Home Tea Maker — In Action", code: "BM · DEMO", type: "Demo Video",
+        desc: "Watch the home / counter-top tea brewer pour a freshly-extracted cup. Pod-based brewing means clean dispensing, consistent strength, no agglutination.",
+        video: "assets/products/brewmaster/home%20tea%20maker.mp4", img: null },
+      { name: "Pradeep Electric Water Boiler & Urn", code: "BM · URN", type: "Stainless Steel Beverage Urn",
+        desc: "Heavy-gauge stainless-steel hot-water urn with twin handles, sight glass, dual taps and an automatic safety cut-off. Reset button protects the heating element if switched on dry. The back-bar workhorse for canteens, banquets and railway pantries.",
+        img: "assets/products/brewmaster/electric%20water%20boilerurn.jpeg" },
     ],
     foot: {
       title: "Coffee and tea, both done right.",
@@ -350,11 +408,12 @@ function renderBrandGrid() {
   }).join("");
 }
 
-/* ========== HOMEPAGE: TOC ========== */
+/* ========== HOMEPAGE: TOC (alphabetised) ========== */
 function renderToc() {
   const toc = document.querySelector(".hero__toc");
   if (!toc) return;
-  toc.innerHTML = BRANDS.map((b) => `
+  const sorted = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name));
+  toc.innerHTML = sorted.map((b) => `
     <li onclick="location.hash='#/brand/${b.slug}'">
       <span>${b.name}</span><span>${b.no}</span>
     </li>
@@ -386,9 +445,11 @@ function renderBrand(slug) {
   // products
   const grid = document.getElementById("product-grid");
   grid.innerHTML = b.products.map((p, i) => {
-    const imgPart = p.img
-      ? `<div class="product-card__img" style="background-image:url('${p.img}')"></div>`
-      : `<div class="product-card__img" style="background:linear-gradient(135deg, #FAF3DF, #E5D9B6); display:grid; place-items:center; color:#6E1F2C; font-family:'Fraunces',serif; font-style:italic; font-size:36px; letter-spacing:-.02em; text-align:center; padding:20px;">${p.code || b.italicName}</div>`;
+    const imgPart = p.video
+      ? `<div class="product-card__img product-card__img--video"><video src="${p.video}" muted loop playsinline autoplay preload="metadata"></video></div>`
+      : p.img
+        ? `<div class="product-card__img" style="background-image:url('${p.img}')"></div>`
+        : `<div class="product-card__img" style="background:linear-gradient(135deg, #FAF3DF, #E5D9B6); display:grid; place-items:center; color:#6E1F2C; font-family:'Fraunces',serif; font-style:italic; font-size:36px; letter-spacing:-.02em; text-align:center; padding:20px;">${p.code || b.italicName}</div>`;
     const typePart = p.type ? `<span class="product-card__type">${p.type}</span>` : "";
     const specRows = [];
     if (p.dilution) specRows.push(`<div class="spec"><span class="spec__label">Dilution</span><span class="spec__val">${p.dilution}</span></div>`);
