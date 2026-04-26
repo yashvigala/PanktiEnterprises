@@ -564,6 +564,120 @@ function observeReveals() {
   els.forEach((el) => io.observe(el));
 }
 
+/* ========== USER REVIEWS — stored in localStorage ========== */
+const REVIEWS_KEY = "panktiUserReviews";
+
+function loadUserReviews() {
+  try {
+    return JSON.parse(localStorage.getItem(REVIEWS_KEY)) || [];
+  } catch { return []; }
+}
+
+function saveUserReviews(reviews) {
+  localStorage.setItem(REVIEWS_KEY, JSON.stringify(reviews));
+}
+
+function escapeHtml(s) {
+  const d = document.createElement("div");
+  d.textContent = s == null ? "" : String(s);
+  return d.innerHTML;
+}
+
+function renderUserReviews() {
+  const container = document.getElementById("user-reviews-grid");
+  if (!container) return;
+  const reviews = loadUserReviews();
+  if (!reviews.length) { container.innerHTML = ""; return; }
+  container.innerHTML = reviews.map((r, i) => {
+    const filled = "★".repeat(r.rating);
+    const empty  = "★".repeat(Math.max(0, 5 - r.rating));
+    return `
+      <article class="review review--user">
+        <span class="review__badge">Yours</span>
+        <div class="review__top">
+          <span class="review__stars" aria-label="${r.rating} of 5">${filled}<span class="muted">${empty}</span></span>
+          <time class="review__date">${escapeHtml(r.date)}</time>
+        </div>
+        <p class="review__body">${escapeHtml(r.body)}</p>
+        <footer class="review__by">
+          <span class="review__name">${escapeHtml(r.name)}</span>
+          <span class="review__role">${escapeHtml(r.role || "Verified visitor")}</span>
+        </footer>
+        <button class="review__delete" data-idx="${i}" aria-label="Delete this review">Remove</button>
+      </article>
+    `;
+  }).join("");
+
+  container.querySelectorAll(".review__delete").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.dataset.idx);
+      const reviews = loadUserReviews();
+      reviews.splice(idx, 1);
+      saveUserReviews(reviews);
+      renderUserReviews();
+    });
+  });
+}
+
+function initReviewForm() {
+  const toggle = document.getElementById("r-toggle");
+  const form = document.getElementById("r-form");
+  const cancel = document.getElementById("r-cancel");
+  const starPicker = document.querySelector(".star-picker");
+  if (!toggle || !form || !starPicker) return;
+
+  let rating = 0;
+  const setRating = (n) => {
+    rating = n;
+    starPicker.querySelectorAll("button").forEach((b, i) => {
+      b.classList.toggle("is-active", i < n);
+    });
+  };
+
+  toggle.addEventListener("click", () => {
+    form.hidden = false;
+    toggle.style.display = "none";
+    document.getElementById("r-name")?.focus();
+  });
+
+  const closeForm = () => {
+    form.hidden = true;
+    toggle.style.display = "";
+    form.reset();
+    setRating(0);
+  };
+  cancel?.addEventListener("click", closeForm);
+
+  starPicker.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-star]");
+    if (!btn) return;
+    setRating(parseInt(btn.dataset.star, 10));
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (rating < 1) {
+      starPicker.classList.add("is-error");
+      setTimeout(() => starPicker.classList.remove("is-error"), 800);
+      return;
+    }
+    const data = new FormData(form);
+    const newReview = {
+      rating,
+      name: (data.get("name") || "").trim(),
+      role: (data.get("role") || "").trim(),
+      body: (data.get("body") || "").trim(),
+      date: new Date().toLocaleDateString("en-GB", { month: "short", year: "numeric" }),
+    };
+    if (!newReview.name || !newReview.body) return;
+    const reviews = loadUserReviews();
+    reviews.unshift(newReview);
+    saveUserReviews(reviews);
+    renderUserReviews();
+    closeForm();
+  });
+}
+
 /* ========== INIT ========== */
 document.addEventListener("DOMContentLoaded", () => {
   renderBrandGrid();
@@ -571,4 +685,6 @@ document.addEventListener("DOMContentLoaded", () => {
   route();
   document.querySelectorAll(".brand-card").forEach((el) => el.classList.add("reveal"));
   observeReveals();
+  renderUserReviews();
+  initReviewForm();
 });
