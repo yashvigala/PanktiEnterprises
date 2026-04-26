@@ -575,15 +575,17 @@ a { color: inherit; text-decoration: none; }
   z-index: 3;
 }
 /* break the grid: feature cards span more.
-   Order: 1 Portronics · 2 JBL · 3 CCD · 4 Brewmaster · 5 Indus ·
-          6 Indus+ · 7 Celesta · 8 Ecolab · 9 Kartin · 10 Ensono · 11 Diwali */
-.brand-card:nth-child(1) { grid-column: span 7; aspect-ratio: 7 / 5; }   /* Portronics */
-.brand-card:nth-child(2) { grid-column: span 5; aspect-ratio: 5 / 5; }   /* JBL */
-.brand-card:nth-child(3) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* CCD */
-.brand-card:nth-child(4) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Brewmaster */
-.brand-card:nth-child(5) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Indus */
-.brand-card:nth-child(6) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Indus+ */
-.brand-card:nth-child(11){ grid-column: span 8; aspect-ratio: 8 / 4; }   /* Diwali — wide seasonal hero */
+   Alphabetical order (12 brands):
+   1 Brew Master · 2 Café Coffee Day · 3 Celesta · 4 Diwali Gifting ·
+   5 Ecolab · 6 Ensono · 7 Indus · 8 Indus+ · 9 JBL · 10 Kartin ·
+   11 Portronics · 12 Titan
+   Row math: 7+5 / 6+6 / 6+6 / 4+4+4 / 4+4+4 = 12 each */
+.brand-card:nth-child(1) { grid-column: span 7; aspect-ratio: 7 / 5; }   /* Brew Master */
+.brand-card:nth-child(2) { grid-column: span 5; aspect-ratio: 5 / 5; }   /* Café Coffee Day */
+.brand-card:nth-child(3) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Celesta */
+.brand-card:nth-child(4) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Diwali Gifting */
+.brand-card:nth-child(5) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Ecolab */
+.brand-card:nth-child(6) { grid-column: span 6; aspect-ratio: 6 / 4; }   /* Ensono */
 
 @media (max-width: 980px) {
   .brand-card,
@@ -1164,6 +1166,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
   max-width: 60ch;
   position: relative;
+}
+.brand-foot__cta {
+  position: relative;
+  margin-top: clamp(22px, 3vw, 32px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 /* ============================================================

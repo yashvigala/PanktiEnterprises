@@ -8,7 +8,7 @@ const BRANDS = [
     slug: "portronics",
     name: "Portronics",
     italicName: "Portronics",
-    no: "01",
+    no: "11",
     category: "Smart Tech & Accessories",
     line: "Pocket-sized intelligence — speakers, finders, mounts, magnetic everything.",
     longLede: "An everyday-tech house with an unfussy industrial language. Portronics packs intent into small footprints — wireless audio, charging, mounting and tracking — and Pankti deploys them across corporate gifting, retail, and hospitality.",
@@ -28,7 +28,7 @@ const BRANDS = [
     slug: "jbl",
     name: "JBL",
     italicName: "JBL",
-    no: "02",
+    no: "09",
     category: "Cinema-grade Audio",
     line: "Loudspeakers and soundbars from the legendary American audio house.",
     longLede: "JBL — the brand that scored half the world's stadiums and most of its serious living rooms. Pankti supplies the full 2025 catalogues for both soundbar/cinema and the wireless speaker ranges to dealers, integrators and hospitality.",
@@ -76,7 +76,7 @@ const BRANDS = [
     slug: "ccd",
     name: "Café Coffee Day",
     italicName: "Coffee Day",
-    no: "03",
+    no: "02",
     category: "Café Solutions",
     line: "Branded vending kiosks for offices, lobbies and forecourts.",
     longLede: "Pankti is an authorised Coffee Day Global channel partner. We deploy CCD-branded vending kiosks and beverage hardware into corporate pantries, hotels, hospitals and institutional sites — the espresso-machine houses (Brew Master, Indus, Indus+, Celesta) sit under their own brand pages.",
@@ -145,7 +145,7 @@ const BRANDS = [
     slug: "brewmaster",
     name: "Brew Master",
     italicName: "Brew Master",
-    no: "04",
+    no: "01",
     category: "Coffee Day · Combo Machine",
     line: "Bean-to-cup coffee with a tea-pod brewer, by Coffee Day.",
     longLede: "The Coffee Day Brew Master pairs the Indus coffee machine with a one-of-a-kind tea-pod brewer. Whatever your favourite beverage — tea or coffee — Brew Master has it covered. Convenient, authentic, home-style, hygienic.",
@@ -172,7 +172,7 @@ const BRANDS = [
     slug: "indus",
     name: "Indus",
     italicName: "Indus",
-    no: "05",
+    no: "07",
     category: "Coffee Day · Bean-to-Cup",
     line: "Refreshed, at the touch of a button.",
     longLede: "Coffee Day Global's state-of-the-art coffee dispensing machine. Authentic Italian espresso, hot water/steam nozzle, touchscreen interface, USB data retrieval and 6 pre-programmed beverage options. Asia's largest integrated coffee company built it for offices that take their coffee seriously.",
@@ -191,7 +191,7 @@ const BRANDS = [
     slug: "indus-plus",
     name: "Indus+",
     italicName: "Indus +",
-    no: "06",
+    no: "08",
     category: "Coffee Day · Touch-screen",
     line: "Interactive screen-enabled coffee machine.",
     longLede: "Indus+ adds an Android-based touch screen, LED back-lighting, in-built speaker and IOT connectivity (GSM) on top of the Indus chassis. The screen doubles as an infotainment / advertising surface — a chic coffee machine that earns its desk space.",
@@ -210,7 +210,7 @@ const BRANDS = [
     slug: "celesta",
     name: "Celesta",
     italicName: "Celesta",
-    no: "07",
+    no: "03",
     category: "Coffee Day · Out-of-Home",
     line: "Out-of-home coffee brewing — sleek, stylish, single-button.",
     longLede: "Coffee Day's Celesta is a state-of-the-art out-of-home coffee machine. Simple user-friendly controls deliver speciality coffees — cappuccino, latte and espresso — at the push of a button, made from hand-picked beans roasted in Coffee Day's own plantations.",
@@ -238,11 +238,11 @@ const BRANDS = [
     slug: "ecolab",
     name: "Ecolab",
     italicName: "Ecolab",
-    no: "08",
+    no: "05",
     category: "Hygiene & Cleaning",
     line: "Industrial cleaning chemistry — the FaciliPro™ programme.",
     longLede: "Ecolab is the global leader in water, hygiene and infection-prevention solutions. Pankti Enterprises supplies the Oasis Compac and FaciliPro range to hotels, hospitals, kitchens, malls and facilities-management houses across the country. Twelve professional SKUs covering every surface in a building.",
-    cover: null,
+    cover: "assets/products/ecolab/ecolab.png",
     products: [
       { name: "Oasis Compac Multipurpose Cleaner and Disinfectant", code: "OC12", type: "Multi Purpose Cleaner & Disinfectant",
         desc: "Multi-purpose cleaner and disinfectant formulated to penetrate dirt and soil. For use on all types of hard surfaces, inside and outside washrooms as well.",
@@ -292,7 +292,7 @@ const BRANDS = [
     slug: "kartin",
     name: "Kartin",
     italicName: "Kartin",
-    no: "09",
+    no: "10",
     category: "Tea/Coffee Premix & Vending",
     line: "Take small, feel big — premix powders and vending machines.",
     longLede: "Kartin is the leading manufacturer of beverage premix powders and vending machines, established in 2015 and based in Mumbai. Original taste, no artificial colour, no preservative — ready-to-use premixes for any vending machine. Eleven flavours across hot and cold.",
@@ -322,7 +322,7 @@ const BRANDS = [
     slug: "ensono",
     name: "Ensono",
     italicName: "Ensono",
-    no: "10",
+    no: "06",
     category: "Workspace Accessories",
     line: "Aluminium laptop stands, hubs and the desk-side essentials.",
     longLede: "Ensono builds the quiet, well-machined desk accessories — folding aluminium laptop risers, USB-C hubs, the bits that make a workspace work. Pankti carries them for corporate fit-outs and gifting.",
@@ -338,7 +338,7 @@ const BRANDS = [
     slug: "diwali",
     name: "Diwali Gifting",
     italicName: "Diwali",
-    no: "11",
+    no: "04",
     category: "Festive Hampers",
     line: "Curated luxury hampers — sweets, dry fruits, ornament-grade boxes.",
     longLede: "Each Diwali we curate a small, considered range of luxury hampers — Mughal-revival trunks, jharokha-front coffers, brocade-lined chests housing sweets, dry-fruits and brass-lidded jars. Built for board-level gifting and concierge programmes.",
@@ -361,6 +361,30 @@ const BRANDS = [
       body: "The full lookbook (47 MB) is the trade reference for our 2025 Diwali range. Order windows open in August and close at the end of September.",
     },
   },
+
+  // ============================================================
+  {
+    slug: "titan",
+    name: "Titan",
+    italicName: "Titan",
+    no: "12",
+    category: "Indian Timepieces",
+    line: "Authorised channel for India's most-worn watch brand.",
+    longLede: "Pankti Enterprises is a Titan channel partner — managing trade orders, inventory and dealer enablement across the full Titan watch portfolio for partner retailers. The two pieces shown here are from the gold-tone bracelet his-and-hers couple-watch series; the complete catalogue spans hundreds of models across price points.",
+    cover: "assets/products/titan/titan1.png",
+    products: [
+      { name: "Titan Couple Set — Bracelet, Striped Dial", code: "TITAN · CPL-A", type: "His & Hers · Day-Date",
+        desc: "Gold-tone stainless steel bracelet pair with deployment clasp. Vertical-stripe champagne dial, applied indices, Titan signature and day-date complication.",
+        img: "assets/products/titan/titan1.png" },
+      { name: "Titan Couple Set — Bracelet, Plain Dial", code: "TITAN · CPL-B", type: "His & Hers · Day-Date",
+        desc: "Gold-tone stainless steel bracelet pair, refined plain champagne dial. Crisp applied indices, Titan signature and day-date complication. The boardroom everyday.",
+        img: "assets/products/titan/titan2.png" },
+    ],
+    foot: {
+      title: "Trade access on request.",
+      body: "Titan's product matrix is large and seasonal — pricing, availability and SKU-level access are shared with verified trade partners on enquiry. Use the Enquire button to begin.",
+    },
+  },
 ];
 
 const BROCHURE_FALLBACK = {
@@ -371,17 +395,19 @@ const BROCHURE_FALLBACK = {
   indus: "assets/brochures/indus.pdf",
   "indus-plus": "assets/brochures/indus-plus.pdf",
   celesta: "assets/brochures/celesta.pdf",
-  ecolab: null,
+  ecolab: "assets/products/ecolab/catalogue.jpeg",
   kartin: "assets/brochures/kartin.pdf",
   ensono: null,
   diwali: "assets/brochures/diwali-2025.pdf",
+  titan: null,
 };
 
-/* ========== HOMEPAGE: brand grid ========== */
+/* ========== HOMEPAGE: brand grid (alphabetised) ========== */
 function renderBrandGrid() {
   const grid = document.getElementById("brand-grid");
   if (!grid) return;
-  grid.innerHTML = BRANDS.map((b) => {
+  const sorted = [...BRANDS].sort((a, b) => a.name.localeCompare(b.name));
+  grid.innerHTML = sorted.map((b) => {
     const bg = b.cover
       ? `background-image:url('${b.cover}')`
       : `background:linear-gradient(135deg, var(--paper-light), var(--paper-deep));`;
@@ -475,25 +501,24 @@ function renderBrand(slug) {
     `;
   }).join("");
 
-  // foot
+  // foot — always renders with at least the enquire CTA for cross-page consistency
   const foot = document.getElementById("brand-foot");
-  if (b.foot || (b.brochures && b.brochures.length > 1)) {
-    let html = "";
-    if (b.foot) {
-      html += `<h3>${b.foot.title}</h3><p>${b.foot.body}</p>`;
-    }
-    if (b.brochures && b.brochures.length > 1) {
-      html += `<div style="margin-top:24px; display:flex; gap:14px; flex-wrap:wrap;">`;
-      b.brochures.forEach((br) => {
-        html += `<a class="btn btn--ghost" href="${br.file}" target="_blank" rel="noopener">${br.label} →</a>`;
-      });
-      html += `</div>`;
-    }
-    foot.innerHTML = html;
-    foot.style.display = "";
-  } else {
-    foot.style.display = "none";
+  let html = "";
+  if (b.foot) {
+    html += `<h3>${b.foot.title}</h3><p>${b.foot.body}</p>`;
   }
+  const ctaBtns = [];
+  if (b.brochures && b.brochures.length > 1) {
+    b.brochures.forEach((br) => {
+      ctaBtns.push(`<a class="btn btn--ghost" href="${br.file}" target="_blank" rel="noopener">${br.label} →</a>`);
+    });
+  } else if (broFile) {
+    ctaBtns.push(`<a class="btn btn--ghost" href="${broFile}" target="_blank" rel="noopener">Download trade brochure</a>`);
+  }
+  ctaBtns.push(`<a class="btn btn--primary" href="#contact">Enquire about this house</a>`);
+  html += `<div class="brand-foot__cta">${ctaBtns.join("")}</div>`;
+  foot.innerHTML = html;
+  foot.style.display = "";
 
   observeReveals();
 }
