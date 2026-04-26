@@ -553,28 +553,26 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand-card__bg {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0 0 50% 0;        /* image fills top half only */
   background-size: cover;
   background-position: center;
-  filter: saturate(.92);
+  filter: saturate(.95);
   transition: transform .8s var(--easing), filter .6s var(--easing);
+  border-bottom: 1px solid var(--gold-light);
 }
 .brand-card:hover .brand-card__bg {
-  transform: scale(1.05);
+  transform: scale(1.04);
   filter: saturate(1.05);
 }
 .brand-card__veil {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg,
-    color-mix(in srgb, var(--paper-light) 0%, transparent) 0%,
-    color-mix(in srgb, var(--paper-light) 60%, transparent) 55%,
-    var(--paper-light) 100%);
+  position: absolute; inset: 50% 0 0 0;        /* solid cream panel — bottom half */
+  background: var(--paper-light);
 }
 
 .brand-card__content {
   position: absolute;
-  inset: 0;
-  padding: clamp(22px, 2.5vw, 38px);
+  inset: 50% 0 0 0;                            /* only the bottom (cream) half */
+  padding: clamp(20px, 2.4vw, 36px);
   display: flex; flex-direction: column; justify-content: space-between;
   color: var(--ink);
   z-index: 2;
@@ -582,6 +580,7 @@ a { color: inherit; text-decoration: none; }
 
 .brand-card__top {
   display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 10px;
 }
 .brand-card__no {
   font-family: var(--mono);
