@@ -1,0 +1,16 @@
+# Local dev / OS
+.claude/
+.DS_Store
+Thumbs.db
+
+# Python build pipeline cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Debug text dumps
+extracted_text/
+
+# Large source media not needed for the website
+WhatsApp Video*.mp4
+WhatsApp Unknown*.zip
