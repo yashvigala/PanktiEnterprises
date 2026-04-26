@@ -1,0 +1,7 @@
+# Pankti Enterprises catalogue — public B2B website
+User-agent: *
+Allow: /
+
+# Brochures and assets are part of the public catalogue
+# No crawl-delay required
+Sitemap: /sitemap.xml
